@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "library": [
+      "~/.hammerspoon/Spoons/EmmyLua.spoon/annotations"
+    ],
+    "checkThirdParty": false
+  },
+  "diagnostics": {
+    "globals": ["hs", "spoon"]
+  },
+  "completion": {
+    "callSnippet": "Replace",
+    "keywordSnippet": "Replace" 
+  }
+}
