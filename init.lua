@@ -64,7 +64,7 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "f", function()
 	moveToUnit(layout.full)
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "left", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "left", function()
 	if isWindowMathes(layout.rightThird) then
 		moveToUnit(layout.rightHalf)
 	elseif isWindowMathes(layout.rightHalf) then
@@ -76,7 +76,7 @@ hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "left", function()
 	end
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "right", function()
 	if isWindowMathes(layout.leftThird) then
 		moveToUnit(layout.leftHalf)
 	elseif isWindowMathes(layout.leftHalf) then
@@ -88,10 +88,10 @@ hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
 	end
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "left", function()
+hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "left", function()
 	moveScreenLeft()
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "right", function()
+hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
 	moveScreenRight()
 end)
