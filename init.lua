@@ -48,7 +48,7 @@ local function moveScreenRight()
 	local win = window.focusedWindow()
 	if win then
 		local screen = win:screen()
-		local eastScreen = screen.toEast(screen)
+		local eastScreen = screen.toWest(screen)
 		win:moveOneScreenEast()
 		return eastScreen ~= nil
 	else
@@ -104,4 +104,31 @@ end)
 
 hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
 	moveScreenRight()
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "h", function()
+	hs.application.launchOrFocus("Finder")
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "j", function()
+	hs.application.launchOrFocus("Google Chrome")
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "8", function()
+	local exists = hs.application.launchOrFocus("Google Chat")
+	if not exists then
+		alert.show('"Google Chat" doesn\'t exist')
+	end
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "l", function()
+	hs.application.launchOrFocus("wezTerm")
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "u", function()
+	hs.application.launchOrFocus("Visual Studio Code")
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "i", function()
+	hs.application.launchOrFocus("Claude")
 end)
