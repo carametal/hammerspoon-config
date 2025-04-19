@@ -78,6 +78,8 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "left", function()
 		if moved then
 			moveToUnit(layout.rightThird)
 		end
+	else
+		moveToUnit(layout.leftHalf)
 	end
 end)
 
@@ -95,6 +97,8 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "right", function()
 		if moved then
 			moveToUnit(layout.leftThird)
 		end
+	else
+		moveToUnit(layout.rightHalf)
 	end
 end)
 
