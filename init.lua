@@ -32,6 +32,30 @@ local function isWindowMathes(unitrect)
 	end
 end
 
+local function moveScreenLeft()
+	local win = window.focusedWindow()
+	if win then
+		local screen = win:screen()
+		local westScreen = screen.toWest(screen)
+		win:moveOneScreenWest()
+		return westScreen ~= nil
+	else
+		alert.show("No focused Window")
+	end
+end
+
+local function moveScreenRight()
+	local win = window.focusedWindow()
+	if win then
+		local screen = win:screen()
+		local eastScreen = screen.toWest(screen)
+		win:moveOneScreenEast()
+		return eastScreen ~= nil
+	else
+		alert.show("No focused Window")
+	end
+end
+
 hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "r", function()
 	hs.reload()
 end)
@@ -62,4 +86,12 @@ hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
 	elseif isWindowMathes(layout.rightHalf) then
 		moveToUnit(layout.rightThird)
 	end
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "left", function()
+	moveScreenLeft()
+end)
+
+hotkey.bind({ "cmd", "alt", "ctrl" }, "right", function()
+	moveScreenRight()
 end)
