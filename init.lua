@@ -48,7 +48,7 @@ local function moveScreenRight()
 	local win = window.focusedWindow()
 	if win then
 		local screen = win:screen()
-		local eastScreen = screen.toWest(screen)
+		local eastScreen = screen.toEast(screen)
 		win:moveOneScreenEast()
 		return eastScreen ~= nil
 	else
@@ -73,6 +73,11 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "left", function()
 		moveToUnit(layout.leftHalf)
 	elseif isWindowMathes(layout.leftHalf) then
 		moveToUnit(layout.leftThird)
+	elseif isWindowMathes(layout.leftThird) then
+		local moved = moveScreenLeft()
+		if moved then
+			moveToUnit(layout.rightThird)
+		end
 	end
 end)
 
@@ -85,6 +90,11 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "right", function()
 		moveToUnit(layout.rightHalf)
 	elseif isWindowMathes(layout.rightHalf) then
 		moveToUnit(layout.rightThird)
+	elseif isWindowMathes(layout.rightThird) then
+		local moved = moveScreenRight()
+		if moved then
+			moveToUnit(layout.leftThird)
+		end
 	end
 end)
 
