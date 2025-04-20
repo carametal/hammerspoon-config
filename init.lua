@@ -110,7 +110,7 @@ hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
 	moveScreenRight()
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "f", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "1", function()
 	hs.application.launchOrFocus("Finder")
 end)
 
