@@ -67,8 +67,6 @@ end)
 hotkey.bind({ "cmd", "alt", "ctrl" }, "left", function()
 	if isWindowMathes(layout.rightThird) then
 		moveToUnit(layout.rightHalf)
-	elseif isWindowMathes(layout.rightHalf) then
-		moveToUnit(layout.full)
 	elseif isWindowMathes(layout.full) then
 		moveToUnit(layout.leftHalf)
 	elseif isWindowMathes(layout.leftHalf) then
@@ -86,8 +84,6 @@ end)
 hotkey.bind({ "cmd", "alt", "ctrl" }, "right", function()
 	if isWindowMathes(layout.leftThird) then
 		moveToUnit(layout.leftHalf)
-	elseif isWindowMathes(layout.leftHalf) then
-		moveToUnit(layout.full)
 	elseif isWindowMathes(layout.full) then
 		moveToUnit(layout.rightHalf)
 	elseif isWindowMathes(layout.rightHalf) then
