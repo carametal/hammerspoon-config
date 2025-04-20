@@ -110,11 +110,11 @@ hotkey.bind({ "cmd", "alt", "ctrl", "shift" }, "right", function()
 	moveScreenRight()
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "h", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "f", function()
 	hs.application.launchOrFocus("Finder")
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "j", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "g", function()
 	hs.application.launchOrFocus("Google Chrome")
 end)
 
@@ -125,14 +125,14 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "8", function()
 	end
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "l", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "w", function()
 	hs.application.launchOrFocus("wezTerm")
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "u", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "v", function()
 	hs.application.launchOrFocus("Visual Studio Code")
 end)
 
-hotkey.bind({ "cmd", "alt", "ctrl" }, "i", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "c", function()
 	hs.application.launchOrFocus("Claude")
 end)
